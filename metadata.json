@@ -1,0 +1,5 @@
+{
+  "name": "GRE Vocabulary Mastery",
+  "description": "A vocabulary learning app using the Ebbinghaus Forgetting Curve to help memorize common GRE words. Includes a feature to explore new words using Gemini API.",
+  "requestFramePermissions": []
+}
