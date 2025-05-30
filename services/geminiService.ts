@@ -3,12 +3,17 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { ExploredWord, GeminiEvaluationResult } from "../types";
 import { GEMINI_MODEL_TEXT } from "../constants";
 
-const API_KEY = "AIzaSyB5A0lZ6cHjyreT1Jt69EuvtZScVyDVE3s"; // Replace with your actual API key
+const API_KEY = "AIzaSyB5A0lZ6cHjyreT1Jt69EuvtZScVyDVE3s";
 
-if (!API_KEY) {
-  console.warn("Gemini API key not found. Word exploration and dynamic fetching features will be disabled.");
+let ai: GoogleGenAI | null = null;
+try {
+  if (API_KEY) {
+    ai = new GoogleGenAI({ apiKey: API_KEY });
+  }
+} catch (e) {
+  console.error("Error initializing GoogleGenAI client:", e);
+  ai = null; // Ensure ai is null if initialization fails
 }
-const ai = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
 
 // Renaming to reflect it's an internal type for the service
 export interface WordDetailsResponseItem {
