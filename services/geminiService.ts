@@ -14,6 +14,7 @@ try {
   console.error("Error initializing GoogleGenAI client:", e);
   ai = null; // Ensure ai is null if initialization fails
 }
+console.log("Value of 'ai' after initialization attempt:", ai);
 
 // Renaming to reflect it's an internal type for the service
 export interface WordDetailsResponseItem {
