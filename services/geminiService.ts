@@ -3,7 +3,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { ExploredWord, GeminiEvaluationResult } from "../types";
 import { GEMINI_MODEL_TEXT } from "../constants";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const API_KEY = "AIzaSyB5A0lZ6cHjyreT1Jt69EuvtZScVyDVE3s"; // Replace with your actual API key
 
 if (!API_KEY) {
   console.warn("Gemini API key not found. Word exploration and dynamic fetching features will be disabled.");
