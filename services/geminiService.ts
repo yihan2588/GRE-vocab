@@ -3,7 +3,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { ExploredWord, GeminiEvaluationResult } from "../types";
 import { GEMINI_MODEL_TEXT } from "../constants";
 
-const API_KEY = "AIzaSyB5A0lZ6cHjyreT1Jt69EuvtZScVyDVE3s";
+const API_KEY = "";
 
 const ai = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
 
