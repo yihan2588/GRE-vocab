@@ -23,7 +23,7 @@ jobs:
 
       - name: Debug - Print VITE_GEMINI_API_KEY (REMOVE LATER)
         run: |
-          echo "VITE_GEMINI_API_KEY is: ${{ secrets.VITE_GEMINI_API_KEY }}"
+          printenv | grep VITE_GEMINI_API_KEY
 
       - name: Build
         run: npm run build
